@@ -9,16 +9,18 @@ class QuizQuestion extends Component {
         const {quiz_question} = this.props;
 
         return (
-            <main>
-                <section>
-                    <p>{quiz_question.instruction_text}</p>
-                </section>
-                <section className="buttons">
-                    <ul>
-                        {quiz_question.answer_options.map((opt, index) => <li key={index}>{opt}</li>)}
-                    </ul>
-                </section>
-            </main>
+            <div className="QuizQuestion">
+                <main>
+                    <section>
+                        <p>{quiz_question.instruction_text}</p>
+                    </section>
+                    <section className="buttons">
+                        <ul>
+                            {quiz_question.answer_options.map((opt, index) => <li key={index}>{opt}</li>)}
+                        </ul>
+                    </section>
+                </main>
+            </div>
         );
     }
 }
